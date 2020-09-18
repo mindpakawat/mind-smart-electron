@@ -1,0 +1,125 @@
+<html>
+<head>
+    <script src="renderer.js"></script> 
+</head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+<link rel="stylesheet" type="text/css" href="https://semantic-ui.com/dist/semantic.css">
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+<body class="w3-content" style="max-width:1300px">
+
+
+<div class="w3-row">
+    <!-- First Grid: form -->
+    <div class="w3-half w3-indigo w3-container" style="height:1000px">
+        <div class="w3-padding-32 w3-padding-large">
+          <h1>Objective</h1>
+          <p class="w3-opacity">GET IN TOUCH</p>
+          <form class="w3-container w3-card w3-padding-32 w3-white" name="ipcForm" onSubmit="JavaScript:sendForm(event)" target="_blank">
+            <div class="w3-section">
+              <label>Name (Separate field):</label>
+              <input class="w3-input" style="width:100%;" type="text" required name="Name" id="Name">
+            </div>
+            <div class="w3-section">
+              <label>Company/Sector:</label>
+              <input class="w3-input" style="width:100%;" type="text" required name="Company" id="Company">
+            </div>
+            <div class="w3-section">
+              <label>Phone:</label>
+              <input class="w3-input" style="width:100%;" type="text" required name="Phone" id="Phone">
+            </div>
+            <div class="w3-section">
+                <label>Details:</label>
+                <input class="w3-input" style="width:100%;" type="text" required name="Details" id="Details">
+              </div>
+            <div class="w3-section">
+              <label>Staff ID:</label>
+              <input class="w3-input" style="width:100%;" type="text" required name="StaffID" id="StaffID">
+            </div>
+            <div class="w3-section">
+              <label>Order:</label>
+              <input class="w3-input" style="width:100%;" type="text" required name="Order" id="Order">
+            </div>
+            <div class="w3-section">
+                <label>In:</label>
+                <input class="w3-input" style="width:100%;" type="datetime-local" required name="In" id="In">
+              </div>    
+            <div class="w3-section">
+                <label>Out:</label>
+                <input class="w3-input" style="width:100%;" type="datetime-local" required name="Out" id="Out" disabled>
+            </div>                                  
+          </form>
+        </div>
+      </div>
+
+  <!-- Second Grid: Info from smart card -->
+  <div class="w3-half w3-indigo w3-container" style="height:1000px">
+    <div class="w3-padding-32 w3-padding-large">     
+      <h1>About Me</h1>
+      <p class="w3-opacity">GET IN TOUCH</p>
+      <form class="w3-container w3-card w3-padding-32 w3-white" name="ipcForm"  target="_blank">
+          <div class="w3-section w3-center">
+              <img id="img-container" class="w3-margin" alt="Person"  style="height: 115px">
+          </div>
+          <div class="w3-section">
+            <label>Thai Nation ID:</label>
+            <input class="w3-input" style="width:100%;" type="text" name="cardID" id="cardID" required>
+          </div>
+          <div class="w3-section">
+            <label>Name (Thai):</label>
+            <input class="w3-input" style="width:100%;" type="text" required name="fullnameTH" id="fullnameTH">
+          </div>
+          <div class="w3-section">
+            <label>Name (Eng):</label>
+            <input class="w3-input" style="width:100%;" type="text" required name="fullnameENG" id="fullnameENG">
+          </div>
+          <div class="w3-section">
+              <label>Birth Date:</label>
+              <input class="w3-input" style="width:100%;" type="text" required name="birthDate" id="birthDate">
+            </div>
+          <div class="w3-section">
+            <label>Gender:</label>
+            <input class="w3-input" style="width:100%;" type="text" required name="gender" id="gender">
+          </div>
+          <div class="w3-section">
+            <label>Address:</label>
+            <input class="w3-input" style="width:100%;" type="text" required name="address" id="address">
+          </div>
+          <div>
+            <button type="button" class="ui secondary button w3-right" onclick="JavaScript:sendTo(event)" id="readBtn">Read Smart Card</button>
+          </div>
+          
+        </form>
+    </div>
+  </div>
+</div>
+<!--table -->
+<div class="w3-row">
+    <div class="w3-indigo w3-container" style="height: auto">
+      <div class="w3-center w3-padding-32">
+        <button id="subBtn" class="w3-padding-16 ui secondary button" type="submit" onclick="JavaScript:sendForm(event)" disabled>SUB</button>
+      </div>
+      <form>
+      <table class="ui fixed single line celled table" id="myTable">
+        <tr>
+          <td>Name</td>
+          <td>Separate field</td>
+          <td>Company/Sector</td>
+          <td>Time in</td>
+          <td>Time out</td>
+        </tr>
+      </table>
+      </form>
+    </div>
+  </div>
+  <script>
+
+  </script>
+<!-- Footer -->
+<footer class="w3-container w3-black w3-padding-32">
+  <p></p>
+</footer>
+
+</body>
+</html>
